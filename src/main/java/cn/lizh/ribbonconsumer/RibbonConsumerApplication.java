@@ -1,14 +1,18 @@
 package cn.lizh.ribbonconsumer;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@EnableDiscoveryClient
-@SpringBootApplication
+/**
+ * EnableCircuitBreaker 开启断路器
+ * EnableDiscoveryClient 服务发现
+ * SpringBootApplication SpringBoot
+ * 以上三个可以使用 SpringCloudApplication替代
+ */
+@SpringCloudApplication
 public class RibbonConsumerApplication {
 
 	@LoadBalanced
